@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="imgs/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="imgs/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="imgs/fav/favicon-16x16.png">
+	<link rel="manifest" href="imgs/fav/site.webmanifest">
+	<link rel="mask-icon" href="imgs/fav/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="UTF-8">
+	<title>OPENSOOQ Page Speed</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+	<link href="css/sumoselect.min.css" rel="stylesheet" />
+
+	<!-- Load c3.css -->
+	<link href="/home/ahmad/dev/c3-0.7.0/c3.css" rel="stylesheet">
+
+	<!-- Load d3.js and c3.js -->
+	<script src="/home/ahmad/dev/d3/d3.min.js" charset="utf-8"></script>
+	<script src="/home/ahmad/dev/c3-0.7.0/c3.min.js"></script>
+
+</head>
+
+<body>
+
+	<div class="container os-mainWrapper">
+
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<a class="navbar-brand" href="/index">OPENSOOQ Page Speed</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+			  <ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+				  <a class="nav-link" href="/index">Home</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="/manager">Manage URL</a>
+				</li>
+				<li class="nav-item active">
+				  <a class="nav-link" href="/dashboard">Dashboard</a>
+				</li>
+			  </ul>
+			</div>
+		  </nav>
+
+		<div class="main-wrapper">
+
+			<div class="server-area">
+				<div class="container">
+
+					<h1 class="os-pageTitle">URL 1</h1>
+
+					<div class="row">
+
+						<div class="col-sm-12 col-md-3">
+							<select name="somename" id="selectOptions" class="form-control" tabindex="-1">
+								<% pages.forEach(page => { %>
+										<option value=<%= page.name %>><%= page.name %></option>
+									<% }) %>
+							</select>
+						</div>
+
+						<div class="col-sm-12 col-md-3">
+							<input id="datepicker" name="dates" type="text" />
+						</div>
+
+						<div class="col-sm-12 col-md-4 text-left platformOptions os-platformOptions">
+							<input type="radio" id="desktopView" name="platform" value="desktop" checked="checked" />
+							<label for="desktopView">Desktop.</label>
+
+							<input type="radio" id="mobileView" name="platform" value="mobile" />
+							<label for="mobileView">Mobile.</label>
+						</div>
+						<div class="col-sm-12 col-md-2">
+							<input class="draw-chart" type="button" value="Submit" />
+						</div>
+
+					</div>
+
+					<hr class="os-orangeHr" />
+
+					<div id="chart">
+						<canvas id="myChart" width="450" height="300"></canvas>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<footer class="footer">POWERD BY OPENSOOQ</footer>
+	<script src='js/jquery.min.js'></script>
+	<script src='js/bootstrap.min.js'></script>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+	<script src="js/index.js"></script>
+</body>
+
+</html>

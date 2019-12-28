@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="imgs/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="imgs/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="imgs/fav/favicon-16x16.png">
+	<link rel="manifest" href="imgs/fav/site.webmanifest">
+	<link rel="mask-icon" href="imgs/fav/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="UTF-8">
+	<title>OPENSOOQ Page Speed</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+	<body>
+
+		<div class="container os-mainWrapper">
+
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand" href="/index">OPENSOOQ Page Speed</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+				  <ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+					  <a class="nav-link" href="/index">Home</a>
+					</li>
+					<li class="nav-item active">
+					  <a class="nav-link" href="/manager">Manage URL</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="/dashboard">Dashboard</a>
+					</li>
+				  </ul>
+				</div>
+			  </nav>
+
+			<div class="main-wrapper">
+
+				<div>
+					<div class="container">
+
+						<h1 class="os-pageTitle">Manage URL</h1>
+
+						<div class="row">
+							<div class="col-12 col-md-4">
+								<input id="url-name" type="text" placeholder="Add name" />
+							</div>
+							<div class="col-12 col-md-6">
+								<input id="url-path" type="text" placeholder="Add URL" />
+							</div>
+							<div class="col-12 col-md-2">
+								<button id='add-url' class="button">Add</button>
+							</div>
+						</div>
+
+						<hr class="os-orangeHr innerPage">
+
+						<div class="os-manageUrlTable">
+							<table class="table table-striped">
+							  <thead>
+							    <tr>
+							      <th scope="col">#</th>
+							      <th scope="col">Name</th>
+							      <th scope="col">URL</th>
+							      <th scope="col"></th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							  <% pages.forEach(page => { %>
+								<tr>
+									<th scope="row">#</th>
+									<td><%= page.name %></td>
+									<td><%= page.url %></td>
+									<td align="right">
+										<button class="btn btn-danger remove" name=<%= page.name %> >remove</button>
+									</td>
+								  </tr>
+								<% }) %>
+							  </tbody
+							</table>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<footer class="footer">POWERD BY OPENSOOQ</footer>
+
+		<script src='js/jquery.min.js'></script>
+		<script src='js/bootstrap.min.js'></script>
+		
+    	<script  src="js/index.js"></script>
+	</body>
+</html>
