@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/circle.css">
 
 </head>
 	<body>
@@ -54,16 +55,24 @@
 
 								<hr class="os-orangeHr width-100px">
 
-								<form class="os-homepageForm">
 									<div class="row">
 										<div class="col-12 col-md-8">
-											<input type="text" placeholder="Type URL" />
+											<input id="url-analyze" type="text" placeholder="Type URL" pattern="?http(s)?://.*" />
 										</div>
 										<div class="col-12 col-md-4">
-											<button class="button">Analyze</button>
+											<button class="button analyze">Analyze</button>
 										</div>
 									</div>
-								</form>
+						<div class="row">
+							<div class="col-12 col-md-3">
+							<input type="radio" id="desktopView" name="platform" value="desktop" checked="checked" />
+							<label for="desktopView">Desktop.</label>
+						</div>
+						<div class="col-12 col-md-3">
+							<input type="radio" id="mobileView" name="platform" value="mobile" />
+							<label for="mobileView">Mobile.</label>
+						</div>
+						</div>
 							</div>
 
 							<div class="col-12 col-md-6">
@@ -74,6 +83,11 @@
 
 					</div>
 				</div>
+
+
+
+				<div  id="percentage-charts" class="text-center">
+	
 			</div>
 
 		</div>

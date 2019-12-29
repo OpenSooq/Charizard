@@ -1,4 +1,5 @@
 const Page = require('../models/page');
+const api = require('../pageSpeedApi');
 
 exports.addUrl = async (req,res)=>{
     try{
@@ -26,7 +27,7 @@ exports.logs = async (req,res)=>{
         const params = req.query;
         const page = await Page.withLogs(params);
         if(page.logs.length==0){
-            res.json({});
+            res.status(200).json({});
         }
         page.logs.forEach(element => {
             const platform = element[params.platform].cateogires;
@@ -69,6 +70,25 @@ exports.dashboard = async(req,res)=>{
     pages = await Page.page.find({status:true});
     res.render("../web/dashboard",{pages:pages});
 }
+
+exports.analyze = async (req,res)=>{
+    try{
+        const params = req.query;
+    const cateogires = ["performance","accessibility","best-practices","pwa","seo"];
+    const strategy = params.platform;
+    let resp = await api.getPageSpeed({url:params.url,strategy:strategy,category:cateogires});
+    resp = JSON.parse(resp);
+    scories = {};
+    for(let i=0; i < cateogires.length; i += 1) {
+        let element = cateogires[i];
+         scories[element] = Math.floor(resp.lighthouseResult.categories[cateogires[i]].score*100);
+    }
+    res.status(200).json(scories);
+    }catch(error){
+        res.status(500).json({message:error.message})
+    }
+
+};
 
 const getDates = function(startDate, endDate) {
     var dates = [],

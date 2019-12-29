@@ -20,6 +20,42 @@ $('document').ready(function () {
 			}
 		});
 	});
+	$(":button[class*='analyze']").on('click',function(){
+		var view ='<div>';
+		$('#percentage-charts').html('');
+		$.ajax({
+			type:"get",
+			url: "/analyze",
+			data:{platform:$('input[name=platform]:checked').val(),url:$('#url-analyze').val()},
+			success: function (data) {
+				for (let key in data) {
+					if (data.hasOwnProperty(key)) {
+						let element = data[key];
+						let color = 'red';
+						if(element>89){
+							color='green';
+						}else if (element>49){
+							color='orange';
+						}
+						view+= '<div class="d-inline-block">'+
+						'<div class="c100 p'+element+' '+color+'">'+
+							'<span>'+element+'%</span>'+
+							'<div class="slice">'+
+								'<div class="bar"></div>'+
+							'<div class="fill"></div>'+
+							'</div>'+
+					'</div>'+
+					'<span>'+key+'</span></div>';					
+					}
+				};
+				view+='</div><div class="scorescale">'+
+				'<span class="scorescale-range scorescale-red">0–49</span>'+
+				'<span class="scorescale-range scorescale-orange">50–89</span>'+
+				'<span class="scorescale-range scorescale-green">90–100</span></div>';
+			$('#percentage-charts').append(view);
+			}
+		});
+	});
 	$('input[name="dates"]').daterangepicker();
 
 
@@ -31,7 +67,7 @@ $('document').ready(function () {
 		$.ajax({
 			type:"get",
 			url: "/logs",
-			data:{name:selected,from:sDate,to:eDate,platform:$('#desktopView').val()},
+			data:{name:selected,from:sDate,to:eDate,platform:$('input[name=platform]:checked').val()},
 			success: function (data) {
 				chart(data);
 			}
