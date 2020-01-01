@@ -35,20 +35,20 @@
 	<div class="container os-mainWrapper">
 
 		<nav class="navbar navbar-expand-lg navbar-light">
-			<a class="navbar-brand" href="/">OPENSOOQ Page Speed</a>
+			<a class="navbar-brand" href="/index.html">OPENSOOQ Page Speed</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			  <span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 			  <ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-				  <a class="nav-link" href="/">Home</a>
+				  <a class="nav-link" href="/index.html">Home</a>
 				</li>
 				<li class="nav-item">
-				  <a class="nav-link" href="/manager">Manage URL</a>
+				  <a class="nav-link" href="/manage-url.html">Manage URL</a>
 				</li>
 				<li class="nav-item active">
-				  <a class="nav-link" href="/dashboard">Dashboard</a>
+				  <a class="nav-link" href="/dashboard.html">Dashboard</a>
 				</li>
 			  </ul>
 			</div>
@@ -59,15 +59,12 @@
 			<div class="server-area">
 				<div class="container">
 
-					<h1 class="os-pageTitle">URL 1</h1>
+					<h1 class="os-pageTitle">URL</h1>
 
 					<div class="row">
 
 						<div class="col-sm-12 col-md-3">
 							<select name="somename" id="selectOptions" class="form-control" tabindex="-1">
-								<% pages.forEach(page => { %>
-										<option value=<%= page.name %>><%= page.name %></option>
-									<% }) %>
 							</select>
 						</div>
 

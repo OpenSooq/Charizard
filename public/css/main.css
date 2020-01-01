@@ -898,7 +898,7 @@ hr.innerPage{
     margin-top:50px;
     margin-bottom: 100px 
 }
-input[type="text"] {
+input[type="text"],input[type="url"] {
     border-radius: 2px;
     border: 1px solid #e5e5e5;
     height: 42px;
@@ -925,7 +925,26 @@ input[type="button"], .button{
 	width: 85%
 }
 
-
+.loader {
+	border: 5px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 5px solid #3498db;
+	width: 50px;
+	height: 50px;
+	-webkit-animation: spin 2s linear infinite; /* Safari */
+	animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }
 
 @media (max-width: 767px) {
 .os-mainWrapper{padding:15px 15px}
