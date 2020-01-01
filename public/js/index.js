@@ -6,16 +6,16 @@
 /* eslint-disable no-undef */
 (function(document, window, body, $) {
     window.ui = window.ui || {};
-    const ui = window.ui;
+    var ui = window.ui;
     if ($(".os-manageUrlTable").length) {
-        let table = "<table class=\"table table-striped\">"+
+        var table = "<table class=\"table table-striped\">"+
 		"<thead> <tr><th scope=\"col\">Name</th><th scope=\"col\">URL</th><th scope=\"col\"></th>"+
 		  "</tr></thead><tbody>";
 		  $.ajax({
             type: "get",
             url: "/page/all",
             success: function(pages) {
-                pages.forEach((page) => {
+                pages.forEach(function(page) {
                     table+= "<tr name="+page.name+"><td>"+page.name+"</td><td>"+page.url+"</td><td align=\"right\">"+
 							"<button class=\"btn btn-danger remove\">remove</button></td></tr>";
                 });
@@ -25,12 +25,12 @@
         });
     }
     if ($("#selectOptions").length) {
-        let view="";
+        var view="";
         $.ajax({
             type: "get",
             url: "/page/all",
             success: function(pages) {
-                pages.forEach((page) => {
+                pages.forEach(function(page) {
                     view+="<option value= "+page.name+">"+page.name+"</option>";
                 });
                 $("#selectOptions").append(view);
@@ -46,9 +46,9 @@
             data: {name: $("#url-name").val(), url: $("#url-path").val()},
             success: function(page, status) {
                 if (status=="success") {
-                    const view = "<tr><td>"+page.name+"</td><td>"+page.url+"</td><td align=\"right\">"+
+                    var row = "<tr><td>"+page.name+"</td><td>"+page.url+"</td><td align=\"right\">"+
                             "<button class=\"btn btn-danger remove\">remove</button></td></tr>";
-                    $(".table").append(view);
+                    $(".table").append(row);
                 }
             },
         });
@@ -56,7 +56,7 @@
 
     $("body").on("click", ":button[class*='remove']", function() {
         var tr = $(this).parent().parent();
-        const urlName = tr.find("td:first-child").text();
+        var urlName = tr.find("td:first-child").text();
         $.ajax({
             type: "post",
             url: "/page/deactivate",
@@ -67,7 +67,7 @@
         });
     });
     $(":button[class*='analyze']").on("click", function() {
-        let view ="<div>";
+        var ChartView ="<div>";
         $("#percentage-charts").html("<div class=\"loader d-inline-block\"></div>");
         $(".loader").fadeOut();
         $.ajax({
@@ -78,16 +78,16 @@
                 $("#percentage-charts").html("<div class=\"alert alert-warning\" role=\"alert\">"+error+"</div>");
             },
             success: function(data, status) {
-                for (const key in data) {
-                    if (key in data) {
-                        const element = data[key];
-                        let color = "red";
+                for (var index in data) {
+                    if (index in data) {
+                        var element = data[index];
+                        var color = "red";
                         if (element>89) {
                             color="green";
                         } else if (element>49) {
                             color="orange";
                         }
-                        view+= "<div class=\"d-inline-block\">"+
+                        ChartView+= "<div class=\"d-inline-block\">"+
 						"<div class=\"c100 p"+element+" "+color+"\">"+
 							"<span>"+element+"%</span>"+
 							"<div class=\"slice\">"+
@@ -95,14 +95,14 @@
 							"<div class=\"fill\"></div>"+
 							"</div>"+
 					"</div>"+
-					"<span>"+key+"</span></div>";
+					"<span>"+index+"</span></div>";
                     }
                 }
-                view+="</div><div class=\"scorescale\">"+
+                ChartView+="</div><div class=\"scorescale\">"+
 				"<span class=\"scorescale-range scorescale-red\">0–49</span>"+
 				"<span class=\"scorescale-range scorescale-orange\">50–89</span>"+
 				"<span class=\"scorescale-range scorescale-green\">90–100</span></div>";
-                $("#percentage-charts").html(view);
+                $("#percentage-charts").html(ChartView);
             },
         });
     });
@@ -112,9 +112,9 @@
 
 
     $(".draw-chart").on("click", function() {
-        const sDate = $("input[name=\"dates\"]").data("daterangepicker").startDate.format("YYYY-MM-DD");
-        const eDate = $("input[name=\"dates\"]").data("daterangepicker").endDate.format("YYYY-MM-DD");
-        const selected = $("#selectOptions option:selected").text();
+        var sDate = $("input[name=\"dates\"]").data("daterangepicker").startDate.format("YYYY-MM-DD");
+        var eDate = $("input[name=\"dates\"]").data("daterangepicker").endDate.format("YYYY-MM-DD");
+        var selected = $("#selectOptions option:selected").text();
         $.ajax({
             type: "get",
             url: "page/logs",
@@ -126,7 +126,7 @@
     });
 
     function chart(data) {
-        const ctx = $("#myChart");
+        var ctx = $("#myChart");
         new Chart(ctx, {
             type: "line",
             data: {
