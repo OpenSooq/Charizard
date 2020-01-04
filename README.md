@@ -1,3 +1,8 @@
+
+# <h1 align="center" >Charizard 🔥🔥</h1>
+
+<br><br>
+
 <a href="https://opensooq.com/">
     <img src="https://opensooqui2.os-cdn.com/os_web/desktop/opensooq-logo.svg" alt="OpenSooq logo" title="OpenSooq" align="right" height="70" />
 </a>
@@ -6,13 +11,13 @@
 ![](https://img.pokemondb.net/artwork/large/charizard.jpg)
 ## Charizard
 
-URLs load speed monitor running on Node.js and MongoDb
+URLs load speed monitor running on Node.js and MongoDb and [Google Page Speed API](https://developers.google.com/speed/docs/insights/v5/get-started)
 
 ## Features
 
 * Analyze the load speed of your Mobile, Desktop platforms.
-* add urls to be monitored.
-* dashborad for history of load speed to each url you added.
+* Add urls to be monitored.
+* Dashboard with history for load speed to each url you added.
 
 ![Home](https://i.imgur.com/fT0cUfU.jpg)
 
@@ -22,21 +27,22 @@ URLs load speed monitor running on Node.js and MongoDb
 
 
 ## Getting Started
-
-By following these steps you will be running your own charizard. If any of the steps do not work for you, please report this as an issue on this github repository and we will look into it as soon as possible!
+### Installing steps
 
 * Install [nodejs](http://nodejs.org/download/) and [mongoDb](https://docs.mongodb.com/manual/installation/)
 * create a new charizard db in mongo with two collections :
-  * page with an unique index on name attribute.
-  * page_log with an index on page_id attribute.
-* Create a new directory for your charizard and navigate to it, clone the repo and run the web command:
+  * page with unique index on name attribute.
+  * page_log with index on page_id attribute.
+* Create new directory for your charizard and navigate to it, clone the repo and run the web command:
   ```bash
     $ npm run web 
   ```
-* add the following command to your [cron job](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/) list to run every day to fetch the page load results for your urls:
+* add the following command to your [cron job](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/) list to be running every day to fetch the page load speed results for your urls:
     ```bash
     $ npm run cron 
   ```
+  
+By following above steps you will be running your own charizard. If any of these steps do not work for you, please report this as issue on this github repository and we will look into it as soon as possible!
   
   
 
