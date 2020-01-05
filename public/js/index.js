@@ -108,16 +108,20 @@
         var sDate = $("input[name=\"dates\"]").data("daterangepicker").startDate.format("YYYY-MM-DD");
         var eDate = $("input[name=\"dates\"]").data("daterangepicker").endDate.format("YYYY-MM-DD");
         var selected = $("#selectOptions option:selected").text();
+        var categories = [];
+        $("input[name='options[]']:checked").each(function() {
+            categories.push($(this).val());
+        });
         $.ajax({
             type: "get",
             url: "page/logs",
-            data: {name: selected, from: sDate, to: eDate, platform: $("input[name=platform]:checked").val()},
+            data: {name: selected, from: sDate, to: eDate, platform: $("input[name=platform]:checked").val(), categories: categories},
             success: function(data) {
                 chart(data);
             },
         });
     });
-/**
+    /**
  * @param {object} data of chart.
  */
     function chart(data) {
