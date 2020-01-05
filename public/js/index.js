@@ -1,23 +1,16 @@
-/* eslint-disable no-var */
-/* eslint-disable no-invalid-this */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-mixed-spaces-and-tabs */
-/* eslint-disable no-tabs */
-/* eslint-disable no-undef */
 (function(document, window, body, $) {
     window.ui = window.ui || {};
-    var ui = window.ui;
     if ($(".os-manageUrlTable").length) {
         var table = "<table class=\"table table-striped\">"+
-		"<thead> <tr><th scope=\"col\">Name</th><th scope=\"col\">URL</th><th scope=\"col\"></th>"+
-		  "</tr></thead><tbody>";
-		  $.ajax({
+"<thead> <tr><th scope=\"col\">Name</th><th scope=\"col\">URL</th><th scope=\"col\"></th>"+
+  "</tr></thead><tbody>";
+        $.ajax({
             type: "get",
             url: "/page/all",
             success: function(pages) {
                 pages.forEach(function(page) {
                     table+= "<tr name="+page.name+"><td>"+page.name+"</td><td>"+page.url+"</td><td align=\"right\">"+
-							"<button class=\"btn btn-danger remove\">remove</button></td></tr>";
+"<button class=\"btn btn-danger remove\">remove</button></td></tr>";
                 });
                 table+="</tbody></table>";
                 $(".os-manageUrlTable").append(table);
@@ -88,20 +81,20 @@
                             color="orange";
                         }
                         ChartView+= "<div class=\"d-inline-block\">"+
-						"<div class=\"c100 p"+element+" "+color+"\">"+
-							"<span>"+element+"%</span>"+
-							"<div class=\"slice\">"+
-								"<div class=\"bar\"></div>"+
-							"<div class=\"fill\"></div>"+
-							"</div>"+
-					"</div>"+
-					"<span>"+index+"</span></div>";
+"<div class=\"c100 p"+element+" "+color+"\">"+
+"<span>"+element+"%</span>"+
+"<div class=\"slice\">"+
+"<div class=\"bar\"></div>"+
+"<div class=\"fill\"></div>"+
+"</div>"+
+"</div>"+
+"<span>"+index+"</span></div>";
                     }
                 }
                 ChartView+="</div><div class=\"scorescale\">"+
-				"<span class=\"scorescale-range scorescale-red\">0–49</span>"+
-				"<span class=\"scorescale-range scorescale-orange\">50–89</span>"+
-				"<span class=\"scorescale-range scorescale-green\">90–100</span></div>";
+"<span class=\"scorescale-range scorescale-red\">0–49</span>"+
+"<span class=\"scorescale-range scorescale-orange\">50–89</span>"+
+"<span class=\"scorescale-range scorescale-green\">90–100</span></div>";
                 $("#percentage-charts").html(ChartView);
             },
         });
@@ -124,9 +117,12 @@
             },
         });
     });
-
+/**
+ * @param {object} data of chart.
+ */
     function chart(data) {
         var ctx = $("#myChart");
+        // eslint-disable-next-line no-undef
         new Chart(ctx, {
             type: "line",
             data: {
@@ -144,4 +140,5 @@
             },
         });
     }
+// eslint-disable-next-line no-undef
 })(document, window, document.body, jQuery);

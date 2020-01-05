@@ -1,4 +1,24 @@
 {
+    "overrides":[{
+        "files": "public/**/*.js",
+        "env": {
+            "browser": true,
+            "node": false,
+            "es6": false
+        },
+        "parserOptions": {
+            "sourceType": "script"
+        },
+        "extends": [
+            "plugin:compat/recommended"
+        ],
+        // "browserslist": ["chrome 70", "last 1 versions", "not ie <= 8"],
+        "plugins": [
+        ],
+        "rules": {
+            "no-var": ["off"]
+        }
+    }],
     "env": {
         "node": true,
         "es6": true
@@ -18,7 +38,7 @@
     "rules": {
         "camelcase": ["off"],
         "no-console": ["off"],
-        "require-jsdoc": ["off"],
+        "require-jsdoc": ["warn"],
         "one-var": ["off"],
         "max-len": ["warn", {
             "ignoreComments": true,
