@@ -6,9 +6,8 @@
 <a href="https://opensooq.com/">
     <img src="https://opensooqui2.os-cdn.com/os_web/desktop/opensooq-logo.svg" alt="OpenSooq logo" title="OpenSooq" align="right" height="70" />
 </a>
+<p align="center"><img src="https://img.pokemondb.net/artwork/large/charizard.jpg" title="OpenSooq" height="50%" width="50%" /></p>
 
-
-![](https://img.pokemondb.net/artwork/large/charizard.jpg)
 ## Charizard
 
 URLs load speed monitor running on Node.js and MongoDb and [Google Page Speed API](https://developers.google.com/speed/docs/insights/v5/get-started)
