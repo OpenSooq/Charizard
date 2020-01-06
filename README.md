@@ -18,12 +18,9 @@ URLs load speed monitor running on Node.js and MongoDb and [Google Page Speed AP
 * Add urls to be monitored.
 * Dashboard with history for load speed to each url you added.
 
-![Home](https://i.imgur.com/fT0cUfU.jpg)
-
-![Manager](https://i.imgur.com/qzimEsP.jpg)
-
-![Dashboard](https://i.imgur.com/eyFRDCL.jpg)
-
+<p align="center"><img src="https://i.imgur.com/fT0cUfU.jpg" title="OpenSooq" height="50%" width="50%" /></p>
+<p align="center"><img src="https://i.imgur.com/qzimEsP.jpg" title="OpenSooq" height="50%" width="50%" /></p>
+<p align="center"><img src="https://i.imgur.com/eyFRDCL.jpg" title="OpenSooq" height="50%" width="50%" /></p>
 
 ## Getting Started
 ### Installing steps
