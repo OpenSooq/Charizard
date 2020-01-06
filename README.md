@@ -6,11 +6,15 @@
 <a href="https://opensooq.com/">
     <img src="https://opensooqui2.os-cdn.com/os_web/desktop/opensooq-logo.svg" alt="OpenSooq logo" title="OpenSooq" align="right" height="70" />
 </a>
-<p align="center"><img src="https://img.pokemondb.net/artwork/large/charizard.jpg" title="OpenSooq" height="50%" width="50%" /></p>
+<p align="left"><img src="https://img.pokemondb.net/artwork/large/charizard.jpg" title="charizard" height="300px" width="300px" /></p>
 
 ## Charizard
 
 URLs load speed monitor running on Node.js and MongoDb and [Google Page Speed API](https://developers.google.com/speed/docs/insights/v5/get-started)
+<br>
+
+## Architecture
+![](https://i.imgur.com/sOPHMY4.jpg)
 
 ## Features
 
@@ -18,9 +22,8 @@ URLs load speed monitor running on Node.js and MongoDb and [Google Page Speed AP
 * Add urls to be monitored.
 * Dashboard with history for load speed to each url you added.
 
-<p align="center"><img src="https://i.imgur.com/fT0cUfU.jpg" title="OpenSooq" height="50%" width="50%" /></p>
-<p align="center"><img src="https://i.imgur.com/qzimEsP.jpg" title="OpenSooq" height="50%" width="50%" /></p>
-<p align="center"><img src="https://i.imgur.com/eyFRDCL.jpg" title="OpenSooq" height="50%" width="50%" /></p>
+<img src="https://i.imgur.com/EGrqAFD.gif" />
+
 
 ## Getting Started
 ### Installing steps
@@ -31,13 +34,17 @@ URLs load speed monitor running on Node.js and MongoDb and [Google Page Speed AP
   * page_log with index on page_id attribute.
 * Create new directory for your charizard and navigate to it, clone the repo and run the web command:
   ```bash
+    $ npm init
+  ```
+* to start the porject run web command: 
+  ```bash
     $ npm run web 
   ```
 * add the following command to your [cron job](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/) list to be running every day to fetch the page load speed results for your urls:
     ```bash
     $ npm run cron 
   ```
-  
+* finally create .env file and add to it the environment variables if you want to override the defaults ones that set in proj.ls file.
 By following above steps you will be running your own charizard. If any of these steps do not work for you, please report this as issue on this github repository and we will look into it as soon as possible!
   
   
