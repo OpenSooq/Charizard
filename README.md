@@ -6,15 +6,14 @@
 <a href="https://opensooq.com/">
     <img src="https://opensooqui2.os-cdn.com/os_web/desktop/opensooq-logo.svg" alt="OpenSooq logo" title="OpenSooq" align="right" height="70" />
 </a>
-<p align="left"><img src="https://img.pokemondb.net/artwork/large/charizard.jpg" title="charizard" height="300px" width="300px" /></p>
 
 ## Charizard
 
-URLs load speed monitor running on Node.js and MongoDb and [Google Page Speed API](https://developers.google.com/speed/docs/insights/v5/get-started)
+automated tool for improving the quality of web pages running on Node.js and MongoDb and [Google Page Speed API](https://developers.google.com/speed/docs/insights/v5/get-started). You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, SEO and more.
 <br>
 
 ## Architecture
-![](https://i.imgur.com/sOPHMY4.jpg)
+![](https://i.imgur.com/6EGt3pb.jpg)
 
 ## Features
 
