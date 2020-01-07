@@ -36,16 +36,19 @@ URLs load speed monitor running on Node.js and MongoDb and [Google Page Speed AP
   ```bash
     $ npm init
   ```
-* to start the porject run web command: 
-  ```bash
-    $ npm run web 
-  ```
 * add the following command to your [cron job](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/) list to be running every day to fetch the page load speed results for your urls:
     ```bash
     $ npm run cron 
   ```
-* finally create .env file and add to it the environment variables if you want to override the defaults ones that set in proj.ls file.
-By following above steps you will be running your own charizard. If any of these steps do not work for you, please report this as issue on this github repository and we will look into it as soon as possible!
+  
+* create .env file and add to it the environment variables if you want to override the defaults ones that set in proj.js file.
+  
+* to start the porject run web command: 
+  ```bash
+    $ npm run web 
+  ```  
+
+* By following above steps you will be running your own charizard. If any of these steps do not work for you, please report this as issue on this github repository and we will look into it as soon as possible!
   
   
 
