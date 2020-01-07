@@ -32,7 +32,7 @@ URLs load speed monitor running on Node.js and MongoDb and [Google Page Speed AP
 * create a new charizard db in mongo with two collections :
   * page with unique index on name attribute.
   * page_log with index on page_id attribute.
-* Create new directory for your charizard and navigate to it, clone the repo and run the web command:
+* Create new directory for your charizard and navigate to it, clone the repo and run the init command:
   ```bash
     $ npm init
   ```
