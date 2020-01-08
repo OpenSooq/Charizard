@@ -6,15 +6,14 @@
 <a href="https://opensooq.com/">
     <img src="https://opensooqui2.os-cdn.com/os_web/desktop/opensooq-logo.svg" alt="OpenSooq logo" title="OpenSooq" align="right" height="70" />
 </a>
-<p align="left"><img src="https://img.pokemondb.net/artwork/large/charizard.jpg" title="charizard" height="300px" width="300px" /></p>
 
 ## Charizard
 
-URLs load speed monitor running on Node.js and MongoDb and [Google Page Speed API](https://developers.google.com/speed/docs/insights/v5/get-started)
+automated tool for improving the quality of web pages running on Node.js and MongoDb and [Google Page Speed API](https://developers.google.com/speed/docs/insights/v5/get-started). You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, SEO and more.
 <br>
 
 ## Architecture
-![](https://i.imgur.com/sOPHMY4.jpg)
+![](https://i.imgur.com/6EGt3pb.jpg)
 
 ## Features
 
@@ -32,20 +31,23 @@ URLs load speed monitor running on Node.js and MongoDb and [Google Page Speed AP
 * create a new charizard db in mongo with two collections :
   * page with unique index on name attribute.
   * page_log with index on page_id attribute.
-* Create new directory for your charizard and navigate to it, clone the repo and run the web command:
+* Create new directory for your charizard and navigate to it, clone the repo and run the init command:
   ```bash
     $ npm init
-  ```
-* to start the porject run web command: 
-  ```bash
-    $ npm run web 
   ```
 * add the following command to your [cron job](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/) list to be running every day to fetch the page load speed results for your urls:
     ```bash
     $ npm run cron 
   ```
-* finally create .env file and add to it the environment variables if you want to override the defaults ones that set in proj.ls file.
-By following above steps you will be running your own charizard. If any of these steps do not work for you, please report this as issue on this github repository and we will look into it as soon as possible!
+  
+* create .env file and add to it the environment variables if you want to override the defaults ones that set in proj.js file.
+  
+* to start the porject run web command: 
+  ```bash
+    $ npm run web 
+  ```  
+
+* By following above steps you will be running your own charizard. If any of these steps do not work for you, please report this as issue on this github repository and we will look into it as soon as possible!
   
   
 
