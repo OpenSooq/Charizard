@@ -42,11 +42,6 @@ Charizard communicated with Google lighthouse to get the score of web then we sa
     $ npm run setup
   ```
   
-* Create new directory for your charizard and navigate to it, clone the repo and run the init command:
-  ```bash
-    $ npm install
-  ```
-
 * add the following command to your [cron job](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/) list to be running every day to fetch the page load speed results for your urls:
   ```bash
     $ npm run cron 
