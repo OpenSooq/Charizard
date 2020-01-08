@@ -15,7 +15,7 @@ automated tool for improving the quality of web pages running on Node.js and Mon
 
 Charizard communicated with Google lighthouse to get the score of web then we save it in MongoDb to build the reporting for the future. This digaram demeonstrates the high level cummincation between modules. 
 
-![](https://i.imgur.com/6EGt3pb.jpg)
+![Architecture](https://i.imgur.com/6EGt3pb.jpg)
 
 ## Features
 
