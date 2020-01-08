@@ -7,7 +7,8 @@
     "lint": "eslint -c .eslintrc.json lib/",
     "lint-fix": "eslint -c .eslintrc.json --fix lib/",
     "web": "nodemon --trace-warnings -w index.js -w lib index.js web",
-    "cron": "node . cron"
+    "cron": "node . cron",
+    "setup": "node . setup"
   },
   "author": "opensooq",
   "license": "Apache-2.0",
