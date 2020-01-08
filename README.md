@@ -43,14 +43,14 @@ Charizard communicated with Google lighthouse to get the score of web then we sa
     $ npm run cron 
   ```
   
-* create .env file and add to it the environment variables if you want to override the defaults ones that set in proj.js file.
+* Note: To override the configuration, you can create  .env file and add to it the environment variables. 
 
 * to start the porject run web command: 
   ```bash
     $ npm run web 
   ```  
 
-* By following above steps you will be running your own charizard. If any of these steps do not work for you, please report this as issue on this github repository and we will look into it as soon as possible!
+* The defualt url will be http://localhost:3000/ . By following above steps you will be running your own charizard. You are welcome to contribute with us or getting an imporvement to make it live. 
   
   
 
