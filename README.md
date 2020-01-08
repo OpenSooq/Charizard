@@ -31,12 +31,14 @@ automated tool for improving the quality of web pages running on Node.js and Mon
 * create a new charizard db in mongo with two collections :
   * page with unique index on name attribute.
   * page_log with index on page_id attribute.
-* Create new directory for your charizard and navigate to it, clone the repo and run the init command:
+* Create new directory for your charizard and navigate to it, clone the repo and run the `npm install` command:
+  
   ```bash
-    $ npm init
+    $ npm install
   ```
+
 * add the following command to your [cron job](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/) list to be running every day to fetch the page load speed results for your urls:
-    ```bash
+  ```bash
     $ npm run cron 
   ```
   
