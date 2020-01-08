@@ -31,17 +31,17 @@ Charizard communicated with Google lighthouse to get the score of web then we sa
 ### Installing steps
 
 * Install [nodejs](http://nodejs.org/download/) and [mongoDb](https://docs.mongodb.com/manual/installation/)
-* create a new charizard db in mongo with two collections :
-  * page with unique index on name attribute.
-  * page_log with index on page_id attribute.
+
 * Create new directory for your charizard and navigate to it, clone the repo and run the `npm install` command:
    ```bash
     $ npm install
   ``` 
+
 * to setup mongodb run the command: 
   ```bash
     $ npm run setup
   ```
+  
 * Create new directory for your charizard and navigate to it, clone the repo and run the init command:
   ```bash
     $ npm install
