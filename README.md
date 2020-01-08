@@ -1,11 +1,10 @@
 
-# <h1 align="center" >Charizard 🔥🔥</h1>
+# <h1 align="center" >Charizard 🔥🔥 <img src="https://awesome.re/badge-flat2.svg" alt="Awesome">  <img src="https://opensooqui2.os-cdn.com/os_web/desktop/opensooq-logo.svg" alt="OpenSooq logo" title="OpenSooq" align="right" height="70" /></h1>
 
 <br><br>
 
-<a href="https://opensooq.com/">
-    <img src="https://opensooqui2.os-cdn.com/os_web/desktop/opensooq-logo.svg" alt="OpenSooq logo" title="OpenSooq" align="right" height="70" />
-</a>
+
+
 
 ## Introduction
 
