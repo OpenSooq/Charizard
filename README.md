@@ -28,9 +28,10 @@ automated tool for improving the quality of web pages running on Node.js and Mon
 ### Installing steps
 
 * Install [nodejs](http://nodejs.org/download/) and [mongoDb](https://docs.mongodb.com/manual/installation/)
-* create a new charizard db in mongo with two collections :
-  * page with unique index on name attribute.
-  * page_log with index on page_id attribute.
+* to setup mongodb run the command: 
+  ```bash
+    $ npm run setup
+  ```
 * Create new directory for your charizard and navigate to it, clone the repo and run the init command:
   ```bash
     $ npm init
@@ -41,7 +42,7 @@ automated tool for improving the quality of web pages running on Node.js and Mon
   ```
   
 * create .env file and add to it the environment variables if you want to override the defaults ones that set in proj.js file.
-  
+
 * to start the porject run web command: 
   ```bash
     $ npm run web 
