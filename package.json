@@ -21,6 +21,7 @@
   "dependencies": {
     "ajv": "^6.10.2",
     "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
     "express": "^4.17.1",
     "mongodb": "^3.4.1",
     "nodemailer": "^6.4.2",
